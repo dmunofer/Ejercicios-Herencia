@@ -7,8 +7,8 @@ class B():
 class C():
     def __init__(self,c):
         self.c =c 
-class D():
+class D(A,B,C):
     def __init__(self,a,b,c):
-        a= A.__init__(self,a)
-        b=B.__init__(self,b)
-        c= C.__init__(self,c)
+        self.a= A.__init__(self,a)
+        self.b=B.__init__(self,b)
+        self.c= C.__init__(self,c)
