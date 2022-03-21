@@ -18,9 +18,21 @@ pared_este = Pared("ESTE")
 class Ventana(Pared,float):
     def __init__(self,num):
         self.ventana= (Pared(),num)
-ventana_norte = Ventana(pared_norte, 0.5) 
-ventana_oeste = Ventana(pared_oeste, 1) 
-ventana_sur = Ventana(pared_sur, 2) 
-ventana_este = Ventana(pared_este, 1) 
+ventana_norte = Ventana(pared_norte, 0.5)
+ventana_oeste = Ventana(pared_oeste, 1)
+ventana_sur = Ventana(pared_sur, 2)
+ventana_este = Ventana(pared_este, 1)
+
+class Casa(Pared(),Ventana()):
+    def __init__(self,pared,ventana):
+        self.pared = pared
+        self.ventana = ventana
+    def __str__(self):
+        return str(self.pared)+str(self.ventana)
+    def superficie_acristalada(self):
+        suma=0
+        for e in self.ventana:
+            suma=suma+e
+        return suma
 
 
