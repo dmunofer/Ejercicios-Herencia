@@ -21,8 +21,7 @@ class Punto3D():
         trasladado_list.append(self.x+p)
         trasladado_list.append(self.y+q)
         trasladado_list.append(self.z+j)
-        trasladado=tuple(trasladado_list)
-        return trasladado
+        return Punto3D(trasladado_list[0],trasladado_list[1],trasladado_list[2])
 
 
 
