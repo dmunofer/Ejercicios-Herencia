@@ -9,6 +9,22 @@ class Punto2D():
         self.y=self.y+q
         return self
 
+class Punto3D():
+    def __init__(self,x,y,z):
+        self.x=x
+        self.y=y
+        self.z=z
+    def __str__(self):
+        return "A = X : "+(str(self.x))+", Y: "+(str(self.y))+", Z: "+(str(self.z))
+    def traslacion(self,p,q,j):
+        trasladado_list =[]
+        trasladado_list.append(self.x+p)
+        trasladado_list.append(self.y+q)
+        trasladado_list.append(self.z+j)
+        trasladado=tuple(trasladado_list)
+        return trasladado
+
+
 
 
 
