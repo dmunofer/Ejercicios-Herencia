@@ -9,6 +9,6 @@ class C():
         self.c =c 
 class D():
     def __init__(self,a,b,c):
-        a= A(a)
-        b=B(b)
-        c= C(c)
+        a= A.__init__(self,a)
+        b=B.__init__(self,b)
+        c= C.__init__(self,c)
